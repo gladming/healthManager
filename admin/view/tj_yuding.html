@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加预订</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="javascript">
+function sjyz(fom){
+	if(fom.name.value==''){
+		alert("请输入课程名称");
+		fom.name.select();
+		return false;
+		}
+	if(fom.sh.value==''){
+		alert("请输入介绍");
+		fom.sh.select();
+		return false;
+		}
+	
+	if(fom.file.value==''){
+		alert("请输入图片");
+		fom.tp.select();
+		return false;
+		}
+	}
+	
+</script>
+<body>
+<div id="header">
+  <h1>米粒健康养生后台管理系统</h1>
+</div>
+<div id="left">
+  <h3>养生管理</h3>
+  <ul>
+    <li><a href="tj_yangsheng.html">添加养生</a></li>
+    <li><a href="ck_yangsheng.html">编辑养生</a></li>
+  </ul>
+  <h3>健康咨询管理</h3>
+  <ul>
+    <li><a href="ck_jiangkangzixun.html">编辑健康咨询</a><a href="lookleibieym.php"></a></li>
+    <li><a href="tj_jiangkangzixun.html">添加健康咨询</a></li>
+  </ul>
+  <h3>会员管理</h3>
+  <ul>
+    <li><a href="user.html">会员管理</a></li>
+  </ul>
+  <h3>预订管理</h3>
+  <ul>
+    <li><a href="tj_yuding.html">添加预订</a></li>
+	<li><a href="ck_yuding.html">编辑预订</a></li>
+  </ul>
+</div>
+<div id="right" >
+  <p style= background-color:rgb(54,132,88); padding-left:10px; color:#FFF;">您当前的位置：预订管理－＞添加预订</p>
+  <form action="shopym.php" method="post" onsubmit="return sjyz(this)" enctype="multipart/form-data">
+    <table width="670" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td  bgcolor="#666666"><table width="670" cellspacing="1">
+             <tr>
+              <td  bgcolor="#FFFFFF"><div>图片:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="name" type="text" id="name" /></td>
+            </tr>
+			<tr>
+              <td  bgcolor="#FFFFFF"><div>预订课程:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="name" type="text" id="name" /></td>
+            </tr>
+            <tr>
+              <td  bgcolor="#FFFFFF"><div>时间:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="zz" type="text" id="zz" /></td>
+            </tr>
+			 <tr>
+              <td  bgcolor="#FFFFFF"><div>价格:</div></td>
+              <td  bgcolor="#FFFFFF"><input name="zz" type="text" id="zz" /></td>
+            </tr>
+            <tr style="text-align:center;">
+              <td colspan="2" bgcolor="#FFFFFF";><input type="submit" name="ok"  value="添&nbsp;加" style=" margin-right:10px;"/>
+                <input type="reset"  value="重&nbsp;置"/></td>
+            </tr>
+          </table>
+		  </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div id="footer">
+ <p>@milijiankanyangsheng.com 版权所有：计算机网络1701班刘丽所属 &nbsp;&nbsp;制作人：刘丽</p>
+</div>
+</body>
+</html>

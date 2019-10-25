@@ -1,0 +1,103 @@
+a{
+    text-decoration: none;
+}
+.is-login a{
+    font-size: 14px;
+}
+#logout{
+    color:red;
+}
+.information{
+    align-content: center;
+}
+.information .content{
+    display: flex;
+    width: 250px;
+    margin: 0 auto;
+}
+.information .content a{
+    padding: 10px;
+}
+
+/*头部样式*/
+.daohan {
+    border:1px solid gray;
+    background-color:rgb(54,132,88);
+}
+.r_daohan ul{
+    height:70px;
+    margin-left:30px;
+    list-style-type:none;
+}
+.r_daohan li{
+    float:left;
+    margin-left:100px;
+}
+
+.r_daohan li a{
+    font-size:24px;
+    line-height:70px;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    height:70px;
+    width:200px;
+}
+.navigator{
+    display: flex;
+    background-color:rgb(54,132,88);
+}
+.navigator .item{
+    flex: 1;
+    font-size:24px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigator .item.active{
+    background-color: aquamarine;
+}
+/*头部样式*/
+
+a:hover{
+    color: #a6e1ec;
+    cursor:pointer
+}
+
+.all {
+    width: 1300px;
+    border: 1px solid green;
+    margin: 50px auto;
+    height: auto;
+}
+.all .top {
+    height: 100px;
+    width: auto;
+    border: 0;
+    border-bottom: 1px solid green;
+    background-color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+
+.navigator .item{
+    padding: 0;
+}
+.all .nav{
+    width: auto;
+}
+.carousel-inner .item img {
+    width: auto;
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(54,132,88);
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    padding-top: 15px;
+    font-family: "宋体";
+}

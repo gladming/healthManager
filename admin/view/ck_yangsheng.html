@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查看养生</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <h1>米粒健康养生后台管理系统</h1>
+</div>
+<div id="left">
+  <h3>养生管理</h3>
+  <ul>
+    <li><a href="tj_yangsheng.html">添加养生</a></li>
+    <li><a href="ck_yangsheng.html">编辑养生</a></li>
+  </ul>
+  <h3>健康咨询管理</h3>
+  <ul>
+    <li><a href="ck_jiangkangzixun.html">编辑健康咨询</a><a href="lookleibieym.php"></a></li>
+    <li><a href="tj_jiangkangzixun.html">添加健康咨询</a></li>
+  </ul>
+  <h3>会员管理</h3>
+  <ul>
+    <li><a href="user.html">会员管理</a></li>
+  </ul>
+  <h3>预订管理</h3>
+  <ul>
+    <li><a href="tj_yuding.html">添加预订</a></li>
+	<li><a href="ck_yuding.html">编辑预订</a></li>
+  </ul>
+</div>
+<div id="right" >
+  <p style= background-color:rgb(54,132,88); padding-left:10px; color:#FFF;">您当前的位置：养生管理－＞查看养生</p>
+ 
+  <form action="dellookshopym.php" method="post" >
+    <span style="text-align:right; padding-right:10px;">
+    
+    </span>
+    <table width="670" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td  bgcolor="#666666"><table width="670" cellspacing="1" border="0px">
+            <tr>
+              <td width="33"  bgcolor="#FFFFFF"><div>复选</div></td>
+			   <td width="99"  bgcolor="#FFFFFF"><div>养生图片</div></td>
+              <td width="99"  bgcolor="#FFFFFF"><div>养生名称</div></td>
+-->
+              <td width="61"  bgcolor="#FFFFFF"><div>介绍</div></td>
+              <td width="126"  bgcolor="#FFFFFF"><div>操作</div></td>
+            </tr>
+			<?php foreach($data as $v){ ?>
+            <tr>
+			 <td  bgcolor="#FFFFFF" style="text-align:center;"><input type="checkbox" name='aa[]' value='<?=$v[]?>'/></td>
+              <td  bgcolor="#FFFFFF" style="text-align:center;"><input type="checkbox" name='aa[]' value='<?=$v[]?>'/></td>
+              <td  bgcolor="#FFFFFF"style="text-align:center;"><?=$v['bookname']?> </td>
+-->
+          
+              <td bgcolor="#FFFFFF"style="text-align:center;"><?=$v['recommend']==1?'是':'否'?></td>
+              <td bgcolor="#FFFFFF" style="text-align:center;"><a href="xg_shopym.php?id=<?=$v['bookid']?>">修改</a>&nbsp;<a href= "dellookshopym.php?id=<?=$v['bookid']?>">删除</a></td>
+            </tr>
+			<?php } ?>
+          </table></td>
+      </tr>
+     <td><table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+
+    <td  style="text-align:right; padding-right:10px;"> 
+	<input type="submit" value="删除选择项" class="buttoncss" style="margin-right:255px;" ></td>   
+		 <?php 
+		 if($page>1){
+			$prev = $page-1;
+		 }else{
+			$prev = $page;
+		 }
+		 if($page<$totalpage){
+			$next = $page+1;
+		 }else{
+			$next = $totalpage;
+		 }
+		 ?>
+	<td  style="text-align:right; padding-right:10px;"> 
+	<a href="lookshopym.php?page=1">首页</a> 
+	<a href="lookshopym.php?page=<?=$prev?>">上一页</a> 
+	<a href="lookshopym.php?page=<?=$next?>">下一页</a> 
+	<a href="lookshopym.php?page=<?=$totalpage?>">末页</a> 
+	  
+      
+		 </td>
+  </tr>
+</table></td>
+    </table>
+   
+ 
+  <p style=" text-align:right; margin-right:5px;">  
+
+</p>
+  </form></div>
+<div id="footer">
+ <p>@milijiankanyangsheng.com 版权所有：计算机网络1701班刘丽所属 &nbsp;&nbsp;制作人：刘丽</p>
+</div>
+</body>
+
+</html>

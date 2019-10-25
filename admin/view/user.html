@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查看用户</title>
+<link href="css/index.css"rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="header">
+  <h1>米粒健康养生后台管理系统</h1>
+</div>
+<div id="left">
+  <h3>养生管理</h3>
+  <ul>
+    <li><a href="tj_yangsheng.html">添加养生</a></li>
+    <li><a href="ck_yangsheng.html">编辑养生</a></li>
+  </ul>
+  <h3>健康咨询管理</h3>
+  <ul>
+    <li><a href="ck_jiangkangzixun.html">编辑健康咨询</a><a href="lookleibieym.php"></a></li>
+    <li><a href="tj_jiangkangzixun.html">添加健康咨询</a></li>
+  </ul>
+  <h3>会员管理</h3>
+  <ul>
+    <li><a href="user.html">会员管理</a></li>
+  </ul>
+  <h3>预订管理</h3>
+  <ul>
+    <li><a href="tj_yuding.html">添加预订</a></li>
+	<li><a href="ck_yuding.html">编辑预订</a></li>
+  </ul>
+</div>
+<div id="right" >
+  <p style= background-color:rgb(54,132,88); padding-left:10px; color:#FFF;">您当前的位置：用户管理－＞查看用户</p>
+  
+<form action="deluser.php" method="post">
+<table width="670" border="0" align="center" cellpadding="0" cellspacing="0" style="text-align:right;">
+ 
+  <tr>
+    <td height="50" bgcolor="#666666">
+    <table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="1">
+	
+      <tr>
+        <td width="50" height="25" bgcolor="#FFFFFF"><div align="center">复选</div></td>
+        <td width="100" bgcolor="#FFFFFF"><div align="center">用户姓名</div></td>
+         <td width="100" bgcolor="#FFFFFF"><div align="center">密码</div></td> 
+                <td width="248" bgcolor="#FFFFFF"><div align="center">操作</div></td>
+        
+        
+      </tr>
+	  <?php foreach($data as $v){ ?>  
+	  <tr>
+        <td height="25" bgcolor="#FFFFFF"><div align="center"><input type="checkbox" name='aa[]' value='<?=$v['userid']?>'>
+        </div></td>
+           <td height="25" bgcolor="#FFFFFF"><div align="left"><?=$v['username']?></div></td>
+           <td height="25" bgcolor="#FFFFFF"><div align="left"><?=$v['password']?></div></td>
+    	   <td height="25" bgcolor="#FFFFFF"><div align="center"><a href="deluser.php?id=<?=$v['userid']?>">删除</a></div></td>
+	  </tr>
+	  <?php }?>
+          </table></td>
+  </tr>
+</table>
+<table width="670" height="25" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+
+    <td  style="text-align:right; padding-right:10px;"> 
+	<input type="submit" value="删除选择项" class="buttoncss" style="margin-right:255px;" >
+	  
+      
+		 </td>  
+		 <?php 
+		 if($page>1){
+			$prev = $page-1;
+		 }else{
+			$prev = $page;
+		 }
+		 if($page<$totalpage){
+			$next = $page+1;
+		 }else{
+			$next = $totalpage;
+		 }
+		 ?>
+		 <td  style="text-align:right; padding-right:10px;"> 
+<a href="user.php?page=1">首页</a> 
+ <a href="user.php?page=<?=$prev?>">上一页</a> 
+ <a href="user.php?page=<?=$next?>">下一页</a> 
+ <a href="user.php?page=<?=$totalpage?>">末页</a> 
+  </tr>
+</table>
+</form>
+  
+  
+  
+  </div>
+<div id="footer">
+ <p>@milijiankanyangsheng.com 版权所有：计算机网络1701班刘丽所属 &nbsp;&nbsp;制作人：刘丽</p>
+</div>
+</body>
+</html>

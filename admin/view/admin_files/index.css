@@ -1,0 +1,54 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BODY {
+	MARGIN: 0px auto; WIDTH: 900px; FONT: 12px/1.6 "ËÎÌå"
+}
+UL LI {
+	PADDING-BOTTOM: 4px; PADDING-TOP: 5px
+}
+INPUT {
+	MARGIN-LEFT: 10px
+}
+#header {
+	MARGIN: 30px 0px 10px
+}
+#header IMG {
+	VERTICAL-ALIGN: middle
+}
+#header H1 {
+	FONT-FAMILY: "ºÚÌå"; COLOR: #8ec657; FONT-SIZE: 24px
+}
+#left {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #8ec657; MARGIN-TOP: 10px; WIDTH: 200px; MARGIN-BOTTOM: 10px; FLOAT: left
+}
+#left H3 {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #628e37; COLOR: #fff
+}
+#left IMG {
+	MARGIN: 0px 5px
+}
+#left UL {
+	PADDING-BOTTOM: 15px; LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+#left UL LI {
+	MARGIN: 5px 10px 0px 30px; WIDTH: 150px; BACKGROUND: url(images/houtai3.gif) no-repeat 50% bottom
+}
+#left UL LI A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+#right {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; MARGIN: 10px; WIDTH: 670px; FLOAT: right; BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid
+}
+#right TABLE {
+	MARGIN: 0px auto; COLOR: #006699
+}
+#right TABLE TR TD TABLE {
+	MARGIN: 0px auto
+}
+#right TABLE TR TD TABLE TR TD DIV {
+	TEXT-ALIGN: center
+}
+#right TABLE TR TD TABLE TR TD {
+	PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加养生</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <h1>米粒健康养生后台管理系统</h1>
+</div>
+<div id="left">
+  <h3>养生管理</h3>
+  <ul>
+    <li><a href="tj_yangsheng.html">添加养生</a></li>
+    <li><a href="ck_yangsheng.html">编辑养生</a></li>
+  </ul>
+  <h3>健康咨询管理</h3>
+  <ul>
+    <li><a href="ck_jiangkangzixun.html">编辑健康咨询</a><a href="lookleibieym.php"></a></li>
+    <li><a href="tj_jiangkangzixun.html">添加健康咨询</a></li>
+  </ul>
+  <h3>会员管理</h3>
+  <ul>
+    <li><a href="user.html">会员管理</a></li>
+  </ul>
+  <h3>预订管理</h3>
+  <ul>
+    <li><a href="tj_yuding.html">添加预订</a></li>
+	<li><a href="ck_yuding.html">编辑预订</a></li>
+  </ul>
+</div>
+<div id="right" >
+  <script language="javascript">
+  function chkinput(form)
+   {
+     if(form.title.value=="")
+	 {
+	   alert("请输入养生名称!");
+	   form.title.select();
+	   return(false);
+	 }
+     if(form.content.value=="")
+	 {
+	   alert("请输入养生介绍!");
+	   form.content.select();
+	   return(false);
+	 }
+	 return(true);
+   }
+</script>
+  <p style= background-color:rgb(54,132,88);padding-left:10px; color:#FFF;">您当前的位置：养生管理－＞添加养生</p>
+  <table width="670" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="175" bgcolor="#666666"><table width="670" height="175" border="0" align="center" cellpadding="0" cellspacing="1">
+          <form name="form1" method="post"  onSubmit="return chkinput(this)">
+            <tr>
+              <td width="82" height="25" bgcolor="#FFFFFF">养生图片：</td>
+              <td width="585" bgcolor="#FFFFFF"><div  style="text-align:left; ">
+                  <input type="text" name="title" size="50" class="inputcss">
+              </div></td>
+            </tr>
+			<tr>
+              <td width="82" height="25" bgcolor="#FFFFFF">养生名称：</td>
+              <td width="585" bgcolor="#FFFFFF"><div  style="text-align:left; ">
+                  <input type="text" name="title" size="50" class="inputcss">
+              </div></td>
+            </tr>
+            <tr>
+              <td height="125" bgcolor="#FFFFFF">养生描述：</td>
+              <td height="125" bgcolor="#FFFFFF"><div style="text-align:left; ">
+                  <textarea name="textarea" rows="8" cols="70" style="margin-left:10px;"></textarea>
+                </div></td>
+            </tr>
+            <tr>
+              <td height="25" colspan="2" bgcolor="#FFFFFF">
+                  <input type="submit" name="submit" value="添加" class="buttoncss"  style="width:55px; height:30px;">
+                  &nbsp;&nbsp;
+                  <input type="reset" value="重写" class="buttoncss "  style="width:55px; height:30px;">
+             </td>
+            </tr>
+          </form>
+        </table></td>
+    </tr>
+  </table>
+</div>
+<div id="footer">
+ <p>@milijiankanyangsheng.com 版权所有：计算机网络1701班刘丽所属 &nbsp;&nbsp;制作人：刘丽</p>
+</div>
+</body>
+</html>

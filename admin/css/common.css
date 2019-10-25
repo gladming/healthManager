@@ -1,0 +1,25 @@
+body {
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+.where-is {
+    height: 24px;
+    background-color: rgb(54, 132, 88);
+    padding-left: 10px;
+    color: #FFF;
+}
+
+tr td {
+    border: 1px solid rgb(54,132,88);
+}
+#left {
+    background-color: white;
+    width: 200px;
+    float: left;
+    margin-left: 120px;
+    margin-top: 10px;
+    padding-bottom: 35px;
+    border: 1px solid rgb(54,132,88);
+    margin-bottom: 10px;
+}

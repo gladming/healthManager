@@ -88,7 +88,18 @@ if(isset($post['appointmentId'])){
     $group="";
     $having="";
     $data=queryPaginate('ys_user_appointment a',$pagesize,$page,$field,$where,$join,$order,$group,$having);
-    echo json_encode(['status'=>1,'msg'=>'获取成功','data'=>$data['data']?$data['data']:[]]);
+    $data=array_map(function ($e)use($post){
+        $pagesize=10000;
+        $field="b.id,b.course";
+        $where="a.user_id=".$e['userid']." and a.appointment<>".$post['appointmentId'];
+        $join="left join ys_yuding b on b.id=a.appointment";
+        $order="a.add_time desc";
+        $group="";
+        $having="";
+        $e['course_list']=queryPaginate('ys_user_appointment a',$pagesize,1,$field,$where,$join,$order,$group,$having)['data'];
+        return $e;
+    },$data['data']);
+    echo json_encode(['status'=>1,'msg'=>'获取成功','data'=>$data?$data:[]]);
     exit;
 }
 ?>
@@ -194,19 +205,29 @@ if(isset($post['appointmentId'])){
                         console.log(e)
                         var html='';
                         $.each(e.data,function (k,v) {
-                            html+='<div>' +
-                                '<div class="username">会员：'+v.username+'</div>' +
-                                '<div>预定时间：'+v.add_time+'</div></div>';
+                            html+='<tr>' +
+                                '<td class="username">'+v.username+'</td>' +
+                                '<td>'+(function (e) {
+                                    var a='';
+                                    $.each(e,function (kk,vv) {
+                                        if(kk){
+                                            a+=','+vv['course'];
+                                        }else{
+                                            a+=vv['course']
+                                        }
+                                    });
+                                    return a;
+                                })(v.course_list)+'</td></tr>';
                         });
                         if(!html){
-                            html+='<div>暂无会员预定</div>';
+                            html+='<tr>暂无会员预定</tr>';
                         }
                     }
                     layer.open({
                         type: 1,
                         title:'课程会员列表',
-                        area: ['420px', '240px'], //宽高
-                        content: '<div class="member-list">'+html+'</div>'
+                        area: ['800px', '400px'], //宽高
+                        content: '<div class="member-list"><table style="text-align: center;"><tr><td>用户</td><td>其它预订</td></tr>'+html+'</table></div>'
                     });
                 }
             });
